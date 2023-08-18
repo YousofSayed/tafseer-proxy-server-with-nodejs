@@ -13,6 +13,16 @@ app.use(
   })
 );
 
+app.get('/getTafseer', async (req, res) => {
+    try {
+        const { id, surah, ahya } = req.params;
+        const data = await (await fetch(`${tafseerEndpoint}`, { method: 'GET' })).json()
+        res.json(data);
+    } catch (error) {
+        res.status(404).json({ ok: false, code: 404, message: error.message })
+    }
+})
+
 app.get('/getTafseer/:id/:surah/:ahya', async (req, res) => {
     try {
         const { id, surah, ahya } = req.params;
