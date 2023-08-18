@@ -33,4 +33,4 @@ app.get('/getTafseer/:id/:surah/:ahya', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => { console.log(`App listent on port ${PORT} with upd6`) });
+app.listen(PORT, () => { console.log(`App listent on port ${PORT} with upd8`) });
