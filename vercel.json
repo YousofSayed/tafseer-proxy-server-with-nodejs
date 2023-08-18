@@ -1,15 +1,8 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "proxy.js",
-        "use": "@now/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "proxy.js"
-      }
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "/api"
+        }
     ]
-  }
+}
