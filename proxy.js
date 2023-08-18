@@ -15,3 +15,5 @@ app.get('/getTafseer/:id/:surah/:ahya/', async (req, res) => {
 
 
 app.listen(PORT, () => { console.log(`App listent on port ${PORT}`) });
+
+module.exports = app;
